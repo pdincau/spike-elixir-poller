@@ -20,7 +20,7 @@ defmodule Sampler do
   end
 
   def handle_info(:work, %{timer: timer} = state) do
-    IO.inspect(state)
+    Samples.send("anyvalue here")
     reschedule_after(timer)
     {:noreply, state}
   end

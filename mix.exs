@@ -12,11 +12,11 @@ defmodule Project.Mixfile do
 
   def application do
     [mod: {Project, []},
-     applications: [:logger, :httpotion]]
+     applications: [:logger, :httpoison]]
   end
 
   defp deps do
-    [{:httpotion, "~> 3.0.2"},
+    [{:httpoison, "~> 0.10.0"},
      {:poison, "~> 3.0"}] 
   end
 end
