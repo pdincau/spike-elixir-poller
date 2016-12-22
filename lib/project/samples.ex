@@ -7,7 +7,8 @@ defmodule Samples do
     ## build your json object as you prefer
     {:ok, body} = %{key: value} |> Poison.encode
     headers = ["Authorization": "Bearer #{token}", "Content-Type": "application/json"]
-    HTTPoison.post(url, body, headers)
+    ## we use IO.inspect to print on screen
+    IO.inspect(HTTPoison.post(url, body, headers))
   end
 
 end
